@@ -9,7 +9,7 @@ setup(
     author='Catacrokers',
     license='MIT',
     author_email='',
-    url='https://github.com/audreyr/cookiecutter-pypackage',
+    url='https://github.com/Catacrockers/cookiecutter-python',
     keywords=['cookiecutter', 'template', 'package', ],
     classifiers=[
         'Environment :: Console',
