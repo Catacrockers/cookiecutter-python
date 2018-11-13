@@ -5,7 +5,7 @@ setup(
     name='cookiecutter-pypackage',
     packages=[],
     version='0.1.0',
-    description='Cookiecutter template for a Python package',
+    description='Catacrokers cookiecutter template for a Python package',
     author='Catacrokers',
     license='MIT',
     author_email='',
