@@ -90,6 +90,9 @@ env-export: ## export current environment
 env-update: ## updates environment from yaml
         conda env update -f {{ cookiecutter.project_slug }}_env.yml -n {{ cookiecutter.project_slug }}
 
+env-create: ## create environment from yml file	
+	conda env create -f {{ cookiecutter.project_slug }}_env.yml
+
 release: dist ## package and upload a release
 	twine upload dist/*
 
