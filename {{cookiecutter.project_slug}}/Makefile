@@ -70,8 +70,7 @@ coverage: ## check code coverage quickly with the default Python
 	coverage run --source {{ cookiecutter.project_slug }} setup.py test
 {%- endif %}
 	coverage report -m
-	coverage html
-	$(BROWSER) htmlcov/index.html
+	coverage html --directory docs/_build/coverage
 
 docs: ## generate Sphinx HTML documentation, including API docs
 	rm -f docs/{{ cookiecutter.project_slug }}.rst
