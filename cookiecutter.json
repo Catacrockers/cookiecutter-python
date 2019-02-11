@@ -1,6 +1,7 @@
 {
   "full_name": "Catacrokers Team",
   "email": "catacrokers@gmail.com",
+  "github_username": "jbarbadillo",
   "project_name": "Python Boilerplate",
   "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}",
   "project_short_description": "Fix me",
