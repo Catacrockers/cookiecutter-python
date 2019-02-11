@@ -84,13 +84,13 @@ servedocs: docs ## compile the docs watching for changes
 	watchmedo shell-command -p '*.rst' -c '$(MAKE) -C docs html' -R -D .
 
 env-create:
-	conda env create -f {{ cookiecutter.project_slug }}.yml
+	conda env create -f {{ cookiecutter.project_slug }}_env.yml
 
 env-export:
-	conda env export -n {{ cookiecutter.project_slug }} > {{ cookiecutter.project_slug }}.yml
+	conda env export -n {{ cookiecutter.project_slug }} > {{ cookiecutter.project_slug }}_env.yml
 
 env-update:
-	conda env update -n {{ cookiecutter.project_slug }} < {{ cookiecutter.project_slug }}.yml
+	conda env update -n {{ cookiecutter.project_slug }} < {{ cookiecutter.project_slug }}_env.yml
 	
 release: dist ## package and upload a release
 	twine upload dist/*
