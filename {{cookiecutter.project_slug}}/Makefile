@@ -84,6 +84,9 @@ docs: ## generate Sphinx HTML documentation, including API docs
 servedocs: docs ## compile the docs watching for changes
 	watchmedo shell-command -p '*.rst' -c '$(MAKE) -C docs html' -R -D .
 
+env-create:
+	conda env create -f {{ cookiecutter.project_slug }}.yml
+
 env-export:
 	conda env export -n {{ cookiecutter.project_slug }} > {{ cookiecutter.project_slug }}.yml
 
