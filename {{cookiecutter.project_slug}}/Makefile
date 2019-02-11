@@ -86,6 +86,9 @@ servedocs: docs ## compile the docs watching for changes
 
 env-export:
 	conda env export -n {{ cookiecutter.project_slug }} > {{ cookiecutter.project_slug }}.yml
+
+env-update:
+	conda env update -n {{ cookiecutter.project_slug }} < {{ cookiecutter.project_slug }}.yml
 	
 release: dist ## package and upload a release
 	twine upload dist/*
