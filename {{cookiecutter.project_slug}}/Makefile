@@ -83,7 +83,6 @@ docs: ## generate Sphinx HTML documentation, including API docs
 servedocs: docs ## compile the docs watching for changes
 	watchmedo shell-command -p '*.rst' -c '$(MAKE) -C docs html' -R -D .
 
-<<<<<<< HEAD
 env-create:
 	conda env create -f {{ cookiecutter.project_slug }}.yml
 
@@ -93,17 +92,6 @@ env-export:
 env-update:
 	conda env update -n {{ cookiecutter.project_slug }} < {{ cookiecutter.project_slug }}.yml
 	
-=======
-env-export: ## export current environment
-        conda env export -n {{ cookiecutter.project_slug }} > {{ cookiecutter.project_slug }}_env.yml
-
-env-update: ## updates environment from yaml
-        conda env update -f {{ cookiecutter.project_slug }}_env.yml -n {{ cookiecutter.project_slug }}
-
-env-create: ## create environment from yml file	
-	conda env create -f {{ cookiecutter.project_slug }}_env.yml
-
->>>>>>> 7603210787b7fed3aa4fbbdc1bfc1767bc124d98
 release: dist ## package and upload a release
 	twine upload dist/*
 
